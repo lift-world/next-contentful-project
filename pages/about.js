@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Head from 'next/head'
 import siteMetadata from '@/data/siteMetadata'
 import Link from '@/components/Link'
@@ -6,8 +5,7 @@ import { Analytics } from '@vercel/analytics/react'
 
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon, MailIcon } from '@/components/social-icons'
-import portraitImage from '../public/static/images/avatar.jpg'
-
+import Image from 'next/image'
 import {
   FaCommentDots,
   FaUsers,
@@ -72,8 +70,10 @@ export default function About() {
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <Image
-                src={portraitImage}
+                src="/static/images/avatar.jpg"
                 alt="portrait of Curtis Warcup"
+                width={800}
+                height={800}
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
